@@ -3,9 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoriesView extends SliverPersistentHeaderDelegate {
-  final VoidCallback onTap;
-
-  CategoriesView({required this.onTap});
 
   @override
   Widget build(
@@ -19,7 +16,7 @@ class CategoriesView extends SliverPersistentHeaderDelegate {
           ...List.generate(
             categories.length,
             (index) => GestureDetector(
-              onTap: onTap,
+              onTap: (){},
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(
