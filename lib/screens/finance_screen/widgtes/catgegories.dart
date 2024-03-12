@@ -1,15 +1,17 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoriesView extends SliverPersistentHeaderDelegate {
-
   @override
   Widget build(
       BuildContext context, double shrinkoffset, bool overlapsContent) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20.w),
-      padding: EdgeInsets.symmetric(vertical: 20.h),
+      color : Colors.white,
+      width: double.infinity,
+      height:120.h,
+      // margin: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(vertical: 20.h , horizontal: 20.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

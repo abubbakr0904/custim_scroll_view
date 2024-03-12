@@ -169,63 +169,12 @@ class _FinanceScreenState extends State<FinanceScreen> {
               ),
             ),
           ),
-          // SliverPersistentHeader(
-          //   pinned: true,
-          //   delegate: SliverChildDelegate(),
-          // ),
-          SliverList(
+          SliverPersistentHeader(
+            pinned: true,
+            delegate: CategoriesView(),
 
-              delegate: SliverChildListDelegate([
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              padding: EdgeInsets.symmetric(vertical: 20.h),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  ...List.generate(
-                    categories.length,
-                    (index) => GestureDetector(
-                      onTap: () {
-                        c = index;
-                        setState(() {
+          ),
 
-                        });
-                      },
-                      child: Container(
-                        padding: EdgeInsets.symmetric(horizontal: 5.w , vertical: 6.h),
-                        decoration: BoxDecoration(
-                          color : c == index ? const Color(0xFF7A7AFD) : Colors.transparent,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.r))),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Container(
-                              width: 10.w,
-                              height: 10.h,
-                              decoration: BoxDecoration(
-                                  color: c == index ? Colors.white : const Color(0xFF7F8192),
-                                  borderRadius: BorderRadius.circular(50.r)),
-                            ),
-                            SizedBox(
-                              width: 10.w,
-                            ),
-                            Text(
-                              categories[index],
-                              style: TextStyle(
-                                  color: c == index ? Colors.white :const Color(0xff7F8192),
-                                  fontSize: 12.sp,
-                                  fontWeight: FontWeight.w500),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  )
-                ],
-              ),
-            )
-          ])),
           SliverList(
             delegate: SliverChildListDelegate(
               [
@@ -277,6 +226,7 @@ class _FinanceScreenState extends State<FinanceScreen> {
           )
         ],
       ),
+      backgroundColor: Colors.white,
     );
   }
 }

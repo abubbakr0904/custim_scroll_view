@@ -12,6 +12,14 @@ class AppImages{
   static const String tortta = "assets/images/tortta.png";
   static const String trust = "assets/images/trust.png";
   static const String uber = "assets/images/uber.png";
+  static const String cardBg = "assets/images/card_bg.png";
+  static const String chicken = "assets/images/chicken.png";
+  static const String food = "assets/images/food.png";
+  static const String fruit = "assets/images/fruit.png";
+  static const String spice = "assets/images/spice.png";
+  static const String sweet = "assets/images/sweet.png";
+  static const String zelen = "assets/images/zelen.png";
+
 
 
 }
